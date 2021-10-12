@@ -4,10 +4,15 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		int a=1, b=2, k=3;
-		k = a++ + b++ +a-- - b-- - k--;
-		
-		System.out.println(k);
+		int x = 0;
+		int y = 10;
+		try {
+			x = y/x;
+			System.out.println("BBB");
+		}
+		catch(Exception e) {
+			System.out.println("AAA");
+		}
 	}
 
 }

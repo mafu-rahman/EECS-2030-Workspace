@@ -49,7 +49,7 @@ public class Engrave {
 			this.drawLine(tickLength, (char)(magnitude+'0'));	// printing the major lines and explicitly casting int to char.
 			this.drawnObject.add("["+tickLength+", "+magnitude+"]");
 			this.drawIntervals(tickLength-1);	// draws interval between major lines. Interval is always one less than the ticklength.
-			this.engrave(tickLength, --magnitude);	// recursively calls the method again with reduced magnitude untill it reached 0.
+			this.engrave(tickLength, --magnitude);	// recursively calls the method again with reduced magnitude untill it reaches 0.
 		}
 	}
 	
@@ -66,7 +66,7 @@ public class Engrave {
 			 * call drawLine with the previous ticklength value, i.e, 1,2,3...
 			 */
 			this.drawIntervals(tickLength-1);
-			this.drawLine(tickLength, '\0');	// prints the dash
+			this.drawLine(tickLength, '\0');	// prints the dash with a null tick label
 			this.drawnObject.add("["+tickLength+"]"); // since it is only prnting the dash, the array only stores the number of dashes.
 			this.drawIntervals(tickLength-1);
 		}
@@ -97,7 +97,7 @@ public class Engrave {
 		
 		double ratio[] = new double[index];	// we will be selecting the cups which have the highest cost to weight ratio, keeping the weight limit as maxWeight.
 		for(int i=0; i<index; i++)		// making another array of cost to weight ratio which corresponds to the value and weight array.
-			ratio[i] = (double) value[i]/weight[i];	// need to explicitly type caste it as value and weight are integers.
+			ratio[i] = (double) value[i]/weight[i];	// need to explicitly type caste it because value and weight are integers.
 		
 		double maxRatio=0.0;
 		int indexMaxRatio=0, sum;
@@ -115,7 +115,7 @@ public class Engrave {
 			return (sum + cupSelection(weight, value, (maxWeight-weight[indexMaxRatio]), index));	//reducing the weight limit and implementing recursion with new value and maxWeight.
 		}
 		
-		else {
+		else {	// if maxWeight is reached, the recursion stops.
 			return 0;
 		}
      }

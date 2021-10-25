@@ -124,6 +124,19 @@ public final class Lab2 {
 			return s;
 		}
 	}
+	//extra
+	public static String getSubstring2(String str, char open, char close) {
+		if (str.charAt(0) == open && str.charAt(str.length()-1) == close)
+			return str.substring(1, str.length()-1);
+		if (str.charAt(0) != open)		
+			str = str.substring(1);
+
+		if (str.charAt(str.length()-1) != close)
+			str = str.substring(0,str.length()-1);
+
+		return getSubstring2(str, open, close);
+
+	}
 	
 	
 	/**

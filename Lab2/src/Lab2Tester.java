@@ -114,6 +114,16 @@ public class Lab2Tester {
 		char close = ')';
 		assertEquals("Failed: getSubstring(\"x + y + z - ( y * z) / 3 * n \", \"(\", \")\")", result, Lab2.getSubstring("x + y + z - ( y * z) / 3 * n ", '(', ')'));
 	}
+	//extra
+	@Test
+	public void testGetSubstring2() {
+
+		String str1 = "This is a 'good' practice";
+		String result = "good";
+		char open = '"';
+		char close = '"';
+		assertEquals("Failed: getSubstring(\"This is a 'good' practice\", '\"', '\"')", result, Lab2.getSubstring2("This is a 'good' practice", '"', '"'));
+	}
 
 	@Test
 	public void testDecimalToBinary4() {

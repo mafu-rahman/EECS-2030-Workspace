@@ -237,5 +237,25 @@ class ContainerTest {
 		String actual = myarray.toString();
 		assertEquals(actual, expected, "MySet: The add() method does not correctly add to the set.");
 	}
+	
+	@Test
+    void testList_13() {
+        MyList myarray = new MyList(); 
+        for( int i = 0; i < 5; i++)
+            myarray.add(String.valueOf(2));
+        myarray.remove("2");
+        System.out.println(myarray.toString());
+        assertEquals(myarray.toString(), "[2 2 2 2]", "MyList: remove() for MyList does not remove the element in the middle.");
+    }
+	@Test
+    void testList_14() {
+        MyList myarray = new MyList(); 
+        for( int i = 0; i < 4; i++)
+            myarray.add(String.valueOf(2));
+        myarray.add(String.valueOf(3));
+        myarray.remove("2");
+        System.out.println(myarray.toString());
+        assertEquals(myarray.toString(), "[2 2 2 3]", "MyList: remove() for MyList does not remove the element in the middle.");
+    }
 
 }

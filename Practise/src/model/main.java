@@ -1,44 +1,37 @@
 package model;
 
-import java.util.ArrayList;
-
-
-
 public class main {
 
 	public static void main(String[] args) {
-		
-		Object obj= new Object();
-		UniversityMember me = new UniversityMember();
-		Student she = new Student();
-		Staff he= new Staff();
-		Undergraduate you = new Undergraduate();
-		Graduate they = new Graduate();
-		
-		Undergraduate john = new Undergraduate(); 
-		Student jane = new Undergraduate(); 
-		UniversityMember jack = new Undergraduate(); 
-		Object jade = new Undergraduate();
-		
-		Graduate rose = new Graduate(); 
-		Student rory = new Graduate(); 
-		UniversityMember roy= new Graduate(); 
-		Object richard = new Graduate();
 
-		System.out.println (obj);
-		System.out.println(john);
-		System.out.println(me);
-		System.out.println(roy);
-		System.out.println(rory);
-		System.out.println(john);
-		System.out.println(she);
-		System.out.println(jack);
-		System.out.println(he);
-		System.out.println(rose);
-		System.out.println(you);
-		System.out.println(jane);
-		System.out.println(they);
-		System.out.println(richard);
-		System.out.println(jade);
+		Object obj1 = new Building(2, 2);
+		Building obj2 = new Building(4, 3);
+		Building obj3 = new Residential();
+		Building obj4 = new Commercial(10, 2, 80.0);
+		Building obj5 = new Townhouse(5, 1, 6);
+		Building obj6 = new Detached();
+		
+		Residential obj7 = new Residential ();
+		Residential obj8 = new Townhouse (5, 1, 6) ;
+		Residential obj9 = new Detached();
+		Object obj10 = new Townhouse(3, 2, 5) ;
+		
+		System.out.println(obj1);
+		System.out.println(obj2);
+		System.out. println(obj3);
+		System.out.println(obj4);
+		System.out.println(obj5);
+		System.out.println(obj6);
+		System.out.println(obj7);
+		System.out.println(obj8);
+		System.out.println(obj9);
+		System.out.println(obj10);
+		
+		
+		Superclass obj11 = new Subclass(3,4);
+		Object[] obj22 = obj11.mainMethod();
+		for(int i=0; i<obj22.length; i++) {
+			System.out.println(obj22[i]);
+		}
 	}
 }

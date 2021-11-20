@@ -19,4 +19,3 @@ public class E extends A {
 		// Please note that t is not visible as it is private. 
 	}	
 }
-

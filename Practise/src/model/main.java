@@ -1,18 +1,28 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class main {
 
 	public static void main(String[] args) {
 		
-		System.out.println(fibonacci(48));
-	}
-	
-	public static int fibonacci (int n) {
-		if( n==1 || n==2)
-			return 1;
-		else
-			return fibonacci(n-1) + fibonacci(n-2);
+		Parent obj1 = new FirstChild();
+		Parent obj2 = new SecondChild();
+		Parent obj3 = new FirstGrandChild();
+		obj1.fifthOp();
+		obj2.firstOp();
+		obj3.firstOp();
+		System.out.println("count= " +obj1.count);
+		System.out.println("done= "+ obj1.done);
+		Parent obj4 = FirstChild.getInstance();
+		Parent obj5 = SecondChild.getInstance();
+		Parent obj6 = FirstGrandChild.getInstance();
+		obj4.fifthOp();
+		obj5.secondOp();
+		obj6.thirdOp();
+		System.out.println("count= " +obj6.count);
+		System.out.println("done= "+ obj6.done);
 	}
 }

@@ -475,7 +475,7 @@ class Music extends PerformingArt{
 			
 			index2 = s.lastIndexOf(" ");	// index2 is the index of last blank space " ".
 			String temp = s.substring(index+1, index2);	// store the substring from first blank space till last blank space which is the duration.
-			temp.trim(); // trimming the substring incase there are more than one blank space.
+			temp = temp.trim(); // trimming the substring incase there are more than one blank space.
 			duration = Integer.parseInt(temp);	// converting the substring to integer value.
 			
 			octave = Integer.parseInt(s.substring(index2+1)); // The substring from index(index2) of last blank space is the octave.
